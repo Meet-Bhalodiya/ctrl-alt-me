@@ -51,6 +51,22 @@ const Contact = () => {
                   </a>
                 </div>
               </div>
+              
+              <div className="flex items-center">
+                <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                    <path d="M16.5 3.5a2.5 2.5 0 0 1 0 5h-7a2.5 2.5 0 0 0 0 5h7a2.5 2.5 0 0 1 0 5h-9"></path>
+                    <line x1="8" y1="9" x2="13" y2="9"></line>
+                    <line x1="8" y1="15" x2="13" y2="15"></line>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-medium mb-1">LeetCode</h3>
+                  <a href="https://leetcode.com/u/meet_bhalodiya/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    leetcode.com/u/meet_bhalodiya
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
           
