@@ -8,13 +8,13 @@ const Projects = () => {
       title: "Microservice Loan Platform",
       description: "A microservice-oriented loan fintech product with 6 Cron applications that saved approximately 4000 man-hours annually.",
       technologies: ["Python", "Django", "Kubernetes", "Docker"],
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800&h=500"
     },
     {
       title: "Payment Gateway Integration",
       description: "Integration of multiple payment gateways resulting in more than $75 million in funding to SMBs with 0% payment failure.",
       technologies: ["Python", "Django", "REST API", "Payment Gateways"],
-      image: "/placeholder.svg"
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800&h=500"
     }
   ];
 
@@ -35,7 +35,7 @@ const Projects = () => {
               key={index} 
               className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
             >
-              <div className="h-48 bg-gray-100 flex items-center justify-center">
+              <div className="h-48 bg-gray-100">
                 <img 
                   src={project.image} 
                   alt={project.title}

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, MapPin, Mail } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -17,12 +17,14 @@ const Hero = () => {
           </h2>
           
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
-            <p className="text-navy-600 text-lg">
-              <span className="font-semibold">Location:</span> Bengaluru, India
+            <p className="text-navy-600 text-lg flex items-center">
+              <MapPin size={18} className="mr-2" />
+              <span>Bengaluru, India</span>
             </p>
             <span className="hidden md:block text-gray-400">•</span>
-            <p className="text-navy-600 text-lg">
-              <span className="font-semibold">Email:</span> meet.bhalodiya259@gmail.com
+            <p className="text-navy-600 text-lg flex items-center">
+              <Mail size={18} className="mr-2" />
+              <span>meet.bhalodiya259@gmail.com</span>
             </p>
           </div>
           
