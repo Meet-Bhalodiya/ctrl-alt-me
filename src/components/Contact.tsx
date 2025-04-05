@@ -22,8 +22,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">Email</h3>
-                  <a href="mailto:abc.xyz@gmail.com" className="text-primary hover:underline">
-                    abc.xyz@gmail.com
+                  <a href="mailto:meet.bhalodiya259@gmail.com" className="text-primary hover:underline">
+                    meet.bhalodiya259@gmail.com
                   </a>
                 </div>
               </div>
@@ -34,8 +34,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">LinkedIn</h3>
-                  <a href="#" className="text-primary hover:underline">
-                    linkedin.com/in/jameswhite
+                  <a href="https://www.linkedin.com/in/meet1998/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    linkedin.com/in/meet1998
                   </a>
                 </div>
               </div>
@@ -46,8 +46,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-medium mb-1">GitHub</h3>
-                  <a href="#" className="text-primary hover:underline">
-                    github.com/jameswhite
+                  <a href="https://github.com/Meet-Bhalodiya" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    github.com/Meet-Bhalodiya
                   </a>
                 </div>
               </div>

@@ -9,7 +9,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 text-navy-800 leading-tight">
-            James White
+            Meet Bhalodiya
           </h1>
           
           <h2 className="text-2xl md:text-3xl lg:text-4xl text-navy-600 mb-8 font-light">
@@ -22,7 +22,7 @@ const Hero = () => {
             </p>
             <span className="hidden md:block text-gray-400">•</span>
             <p className="text-navy-600 text-lg">
-              <span className="font-semibold">Email:</span> abc.xyz@gmail.com
+              <span className="font-semibold">Email:</span> meet.bhalodiya259@gmail.com
             </p>
           </div>
           

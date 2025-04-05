@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
 
 const Projects = () => {
   // These would be replaced with actual projects
@@ -9,22 +8,13 @@ const Projects = () => {
       title: "Microservice Loan Platform",
       description: "A microservice-oriented loan fintech product with 6 Cron applications that saved approximately 4000 man-hours annually.",
       technologies: ["Python", "Django", "Kubernetes", "Docker"],
-      image: "/placeholder.svg", // Using placeholder image
-      cta: "View Details"
+      image: "/placeholder.svg"
     },
     {
       title: "Payment Gateway Integration",
       description: "Integration of multiple payment gateways resulting in more than $75 million in funding to SMBs with 0% payment failure.",
       technologies: ["Python", "Django", "REST API", "Payment Gateways"],
-      image: "/placeholder.svg", // Using placeholder image
-      cta: "View Details"
-    },
-    {
-      title: "Performance Optimization",
-      description: "Application performance improved by 50% using multithreading & AsyncIO, reducing runtime from 60 minutes to 30 seconds.",
-      technologies: ["Python", "AsyncIO", "Multithreading", "Performance Tuning"],
-      image: "/placeholder.svg", // Using placeholder image
-      cta: "View Details"
+      image: "/placeholder.svg"
     }
   ];
 
@@ -39,7 +29,7 @@ const Projects = () => {
           high-quality, efficient software solutions.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index} 
@@ -67,10 +57,6 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                
-                <Button variant="outline" size="sm" className="mt-2 w-full">
-                  {project.cta}
-                </Button>
               </div>
             </div>
           ))}
