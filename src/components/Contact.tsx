@@ -2,8 +2,26 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
+import { useState } from 'react';
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    setIsSubmitting(true);
+    // The form will be handled by formsubmit.co
+    // This is just to show a toast after submission
+    setTimeout(() => {
+      setIsSubmitting(false);
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. I will get back to you soon.",
+      });
+    }, 2000);
+  };
+  
   return (
     <section id="contact" className="section bg-gray-50">
       <div className="container">
@@ -87,7 +105,21 @@ const Contact = () => {
           <div className="bg-white p-6 rounded-lg shadow-sm">
             <h3 className="font-semibold text-xl mb-4">Send me a message</h3>
             
-            <form className="space-y-4">
+            <form 
+              action="https://formsubmit.co/meet.bhalodiya259@gmail.com" 
+              method="POST"
+              className="space-y-4"
+              onSubmit={handleSubmit}
+            >
+              {/* Optional: honeypot to prevent spam */}
+              <input type="text" name="_honey" style={{ display: 'none' }} />
+              
+              {/* Disable captcha */}
+              <input type="hidden" name="_captcha" value="false" />
+              
+              {/* Success page redirect (optional) */}
+              <input type="hidden" name="_next" value={window.location.href} />
+              
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
                   Name
@@ -95,6 +127,8 @@ const Contact = () => {
                 <input
                   type="text"
                   id="name"
+                  name="name"
+                  required
                   className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition"
                   placeholder="Your name"
                 />
@@ -107,6 +141,8 @@ const Contact = () => {
                 <input
                   type="email"
                   id="email"
+                  name="email"
+                  required
                   className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition"
                   placeholder="Your email"
                 />
@@ -118,13 +154,17 @@ const Contact = () => {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={5}
+                  required
                   className="w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none transition"
                   placeholder="Your message"
                 ></textarea>
               </div>
               
-              <Button className="w-full">Send Message</Button>
+              <Button type="submit" className="w-full" disabled={isSubmitting}>
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+              </Button>
             </form>
           </div>
         </div>
